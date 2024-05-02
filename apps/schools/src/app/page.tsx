@@ -1,14 +1,16 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
 import { Breadcrumb, Button, Card, UIColumn, UIDataGrid, UIRow, UISkeleton, useGet } from '@apus/ui';
 import styles from './page.module.scss';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation'
 
 export default function Index() {
   const [params, setParams] = useState<any>({});
-  const { loading, response, get, error } = useGet<{data: [number, any]}>(
+  const router = useRouter();
+  const { loading, response, get } = useGet<{data: [number, any]}>(
     'api/search',
     {
-      cache: false,
       eager: false
     }
   );
@@ -68,7 +70,7 @@ export default function Index() {
               <UIColumn name="city">{s.cidade}</UIColumn>
               <UIColumn name="state">{s.estado}</UIColumn>
               <UIColumn name="grade">{s.idebAI.toFixed(1)} - {s.idebAF.toFixed(1)}</UIColumn>
-              <UIColumn name="action"><Button text='Consultar'/></UIColumn>
+              <UIColumn name="action"><Button text='Consultar' click={() => router.push(`/detail/${s.cod}`)}/></UIColumn>
             </UIRow>
           )}
           {!schools ? <UIRow>Nenhum registro encontrado!</UIRow> : null} 
