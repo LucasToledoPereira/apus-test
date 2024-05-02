@@ -1,4 +1,5 @@
 import './global.css';
+import { Container, Navbar } from '@apus/ui';
 
 export const metadata = {
   title: 'Welcome to schools',
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+          <Navbar title='Teste Técnico - Lucas Toledo Pereira' logo='/images/logos/apus.png'/>
+          <Container>{children}</Container>
+      </body>
     </html>
   );
 }

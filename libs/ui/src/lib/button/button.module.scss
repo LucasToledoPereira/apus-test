@@ -1,0 +1,17 @@
+.ui-button {
+    min-height: var(--ui-button-height, 34px);
+    min-width: var(--ui-button-width, 135px);
+    padding: 6px 22px;
+    font-weight: 500;
+    background-color: var(--ui-primary-color, #1764E3);
+    border-radius: 99px;
+    color: var(--ui-primary-color-contrast,  #FFFFFF);
+
+    &:hover {
+        background-color: var(--ui-primary-color-hint, #00336B);
+    }
+
+    &--active {
+        background-color: var(--ui-primary-color-hint, #00336B);
+    }
+}

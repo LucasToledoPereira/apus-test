@@ -1,0 +1,17 @@
+
+.ui-navbar {
+    min-height: var(--ui-navbar-height, 75px);
+    border-bottom: 1px solid var(--ui-navbar-bottom-border, #C2C2C2);
+
+    &__title {
+        color: var(--ui-navbar-title-color, #3979E4);
+        font-size: var(--ui-navbar-title-size, 18px);
+        font-weight: var(--ui-navbar-title-weight, 500);
+    }
+
+    &__menu_icon img {
+        height: 31px;
+        width: 31px;
+        object-fit: contain;
+    }
+}
