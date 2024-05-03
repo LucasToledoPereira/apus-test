@@ -1,7 +1,7 @@
 import styles from './skeleton.module.scss';
 import { UISkeletonProps } from './skeleton.props';
 
-const UISkeleton = ({ width, height, radius }: UISkeletonProps) => {
+const Skeleton = ({ width, height, radius }: UISkeletonProps) => {
   return (
     <div
       className={styles['ui-skeleton']}
@@ -14,4 +14,4 @@ const UISkeleton = ({ width, height, radius }: UISkeletonProps) => {
   );
 };
 
-export { UISkeleton };
+export { Skeleton };

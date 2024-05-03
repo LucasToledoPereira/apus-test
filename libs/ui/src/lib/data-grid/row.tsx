@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import styles from './grid.module.scss';
-import { UIDataGridContext } from './grid.context';
+import { DataGridContext } from './grid.context';
 import classNames from 'classnames';
 import { UIRowProps } from './grid.props';
 
-const UIRow = ({ children, onClick, className }: UIRowProps) => {
-  const _template = useContext(UIDataGridContext);
+const Row = ({ children, onClick, className }: UIRowProps) => {
+  const _template = useContext(DataGridContext);
   const _isString = typeof _template === 'string';
   const _cssStyle = {
     '--ui-data-grid-row-template': _isString ? _template : _template.sm,
@@ -36,4 +36,4 @@ const UIRow = ({ children, onClick, className }: UIRowProps) => {
   );
 };
 
-export { UIRow };
+export { Row };

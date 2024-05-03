@@ -1,8 +1,9 @@
-.page {
-}
-
 .schools-list__header {
     background-color: #EAECF4;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+}
+
+.schools-list__rows:nth-child(odd) {
+    background-color: #D8E5FA;
 }

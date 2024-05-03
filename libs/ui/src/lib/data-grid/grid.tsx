@@ -1,9 +1,9 @@
 // import-conductor-skip
 'use client';
 
-import { UIColumn } from './column';
-import { UIDataGridContext } from './grid.context';
-import { UIRow } from './row';
+import { Column } from './column';
+import { DataGridContext } from './grid.context';
+import { Row } from './row';
 import style from './grid.module.scss';
 import { UIDataGridProps, UIDataGridTemplate } from './grid.props';
 
@@ -16,12 +16,12 @@ const checkTemplateProp = (template: UIDataGridTemplate | string) => {
   }
 };
 
-const UIDataGrid = ({ children, template = '' }: UIDataGridProps) => {
+const DataGrid = ({ children, template = '' }: UIDataGridProps) => {
   checkTemplateProp(template);
   return (
-    <UIDataGridContext.Provider value={template}>
+    <DataGridContext.Provider value={template}>
       <div className={`w-100 ${style['ui-data-grid']}`}>{children}</div>
-    </UIDataGridContext.Provider>
+    </DataGridContext.Provider>
   );
 };
-export { UIColumn, UIRow, UIDataGrid };
+export { Column, Row, DataGrid };

@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import styles from './grid.module.scss';
 import { UIColumnProps } from './grid.props';
 
-const UIColumn = ({ name, label, children, className = '' }: UIColumnProps) => {
+const Column = ({ name, label, children, className = '' }: UIColumnProps) => {
   const _css = classNames(styles['ui-data-grid__column'], className);
   return (
     <div
@@ -15,4 +15,4 @@ const UIColumn = ({ name, label, children, className = '' }: UIColumnProps) => {
   );
 };
 
-export { UIColumn };
+export { Column };

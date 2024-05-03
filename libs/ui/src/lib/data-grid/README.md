@@ -1,4 +1,4 @@
-# UIDataGrid
+# DataGrid
 
 It renders a responsive data grid (like a table). Must be used with UIColumn and UIRow components.
 To build a responsive data grid we are using the **grid-template-area** css property, you can read more at the [official documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas).
@@ -11,7 +11,7 @@ To build a responsive data grid we are using the **grid-template-area** css prop
 const MyComponent = () => {
   return (
     <>
-      <UIDataGrid
+      <DataGrid
         template={{
           sm: "'column_one column_two' 'column_three column_three'",
           md: "'column_one column_two' 'column_three column_three'",
@@ -19,12 +19,12 @@ const MyComponent = () => {
           xl: "'column_one column_two column_three'",
         }}
       >
-        <UIRow>
-          <UIColumn name="column_one">{/** Column content goes here*/}</UIColumn>
-          <UIColumn name="column_two">{/** Column content goes here*/}</UIColumn>
-          <UIColumn name="column_three">{/** Column content goes here*/}</UIColumn>
+        <Row>
+          <Column name="column_one">{/** Column content goes here*/}</Column>
+          <Column name="column_two">{/** Column content goes here*/}</Column>
+          <Column name="column_three">{/** Column content goes here*/}</Column>
         </UIRow>
-      </UIDataGrid>
+      </DataGrid>
     </>
   );
 };

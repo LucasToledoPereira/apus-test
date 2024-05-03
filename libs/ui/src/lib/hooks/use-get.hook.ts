@@ -64,7 +64,12 @@ export function useGet<T>(
       })
         .then(async (response) => {
           const ok = await response.ok;
-          const result = await response.json();
+          let result;
+          try {
+            result = await response.json();
+          } catch {
+            result = {}
+          }
           const setStateFn = ok ? setResponse : setError;
           setStateFn(result);
           cache.set(key, {

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "nx dev --project=schools",
     "start": "nx start --project=schools",
-    "build": "nx build --project=schools"
+    "build": "nx build --project=schools",
+    "test:ui": "nx test --project=ui"
   },
   "private": true,
   "dependencies": {

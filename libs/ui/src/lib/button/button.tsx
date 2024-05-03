@@ -7,10 +7,13 @@ import classNames from "classnames";
 const Button = ({text, icon, click= () => {}, active, disabled}: UIButtonProps) => {
     const _styles = classNames(
         styles['ui-button'],
-        active ? styles['ui-button--active'] : ''
+        active ? styles['ui-button--active'] : '',
+        'flex justify-center items-center'
     );
     return (
-        <button className={_styles} onClick={() => click()} disabled={disabled}>{text}</button>
+        <button data-testid="ui-button" className={_styles} onClick={() => click()} disabled={disabled}>
+            {icon ? <img className="pr-3" src={icon} alt="icon"/> : null}
+            {text}</button>
     )
 }
 
